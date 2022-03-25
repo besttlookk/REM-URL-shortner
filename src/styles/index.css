@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+
+    /* scrollbar-color: hsl(180, 66%, 49%) hsl(257, 27%, 26%); */
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: hsl(257, 27%, 26%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(180, 66%, 49%);
+    border-radius: 1rem;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply px-6 max-w-7xl mx-auto;
+  }
+
+  .btn-rounded {
+    @apply text-white bg-primary;
+  }
+
+  .logo-white {
+    path {
+      fill: white;
+    }
+  }
+
+  .nav-list {
+    @apply mb-8;
+    h5 {
+      @apply text-lg font-bold text-white mb-3 lg:text-left;
+    }
+
+    ul {
+      @apply flex flex-col gap-2 lg:gap-3;
+    }
+
+    li {
+      @apply text-fade  cursor-pointer lg:text-left hover:text-primary transition duration-500 inline-block;
+    }
+  }
+}
